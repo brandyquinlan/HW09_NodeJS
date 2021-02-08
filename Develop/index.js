@@ -10,40 +10,46 @@ function init() {
                 name: 'name',
                 message: 'What is your name?',
             },
-            // {
-            //     type: 'input',
-            //     name: 'email',
-            //     message: 'What is your email address?',
-            // },
-            // {
-            //     type: 'input',
-            //     name: 'github',
-            //     message: 'What is the URL to your GitHub profile?',
-            // },
-            // {
-            //     type: 'input',
-            //     name: 'title',
-            //     message: 'What is the title of your project?',
-            // },
-            // {
-            //     type: 'input',
-            //     name: 'description',
-            //     message: 'Enter a description of your project.',
-            // },
-            // {
-            //     type: 'input',
-            //     name: 'installation',
-            //     message: 'Enter installation instructions.',
-            // },
-            // {
-            //     type: 'input',
-            //     name: 'usage',
-            //     message: 'Enter any usage information.',
-            // },
+            {
+                type: 'input',
+                name: 'email',
+                message: 'What is your email address?',
+            },
+            {
+                type: 'input',
+                name: 'github',
+                message: 'What is the URL to your GitHub profile?',
+            },
+            {
+                type: 'input',
+                name: 'title',
+                message: 'What is the title of your project?',
+            },
+            {
+                type: 'input',
+                name: 'description',
+                message: 'Enter a description of your project.',
+            },
+            {
+                type: 'input',
+                name: 'installation',
+                message: 'Enter installation instructions.',
+            },
+            {
+                type: 'input',
+                name: 'usage',
+                message: 'Enter any usage information.',
+            },
+            {
+                type: 'confirm',
+                name: 'confirmLicense',
+                message: 'Does your project have a license?',
+                default: false
+            },
             {
                 type: 'list',
                 name: 'license',
-                message: 'Select the applicable license information.',
+                message: 'Select the license information, if any.',
                 choices: [
                     "GNU GPLv3",
                     "Mozilla Public License 2.0",
@@ -52,19 +58,35 @@ function init() {
                     "Boost Software License 1.0",
                     "The Unlicense",
                     "BSD 3-Clause"
-                ]
-            }
-            // },
-            // {
-            //     type: 'input',
-            //     name: 'contributing',
-            //     message: 'Enter any contribution guidelines.',
-            // },
-            // {
-            //     type: 'input',
-            //     name: 'tests',
-            //     message: 'Enter the test instructions.',
-            // }
+                ],
+                when: ({ confirmLicense }) => {
+                    if (confirmLicense) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+            },
+            {
+                type: 'input',
+                name: 'contributing',
+                message: 'Enter any contribution guidelines.',
+            },
+            {
+                type: 'input',
+                name: 'tests',
+                message: 'Enter any test instructions.',
+            },
+            {
+                type: 'input',
+                name: 'deployedURL',
+                message: 'Deployed Project URL',
+            },
+            {
+                type: 'input',
+                name: 'githubRepo',
+                message: 'GitHub Repo URL',
+            },
 
         ])
         .then((answers) => {

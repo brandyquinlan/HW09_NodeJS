@@ -1,4 +1,4 @@
-const LicenseList = [{
+const licenseList = [{
         name: 'GNU GPLv3',
         link: "https://www.gnu.org/licenses/gpl-3.0",
         badge: "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
@@ -33,58 +33,86 @@ const LicenseList = [{
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-    let chosenLicense = LicenseList.license;
-    console.log("console log " + chosenLicense);
-}
+    const selectedLicense = licenseList.filter(item => item.name === license);
+    if (!license) {
+        return '';
+    } else
+        return selectedLicense[0].badge;
+    // return selectedLicense[0].badge ? confirmLicense === true;
+};
+
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+
+function renderLicenseLink(license) {
+    const selectedLicense = licenseList.filter(item => item.name === license);
+    if (!license) {
+        return '';
+    } else
+        return selectedLicense[0].link;
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+
+function renderLicenseSection(license) {
+    if (!license) {
+        return '';
+    } else
+        return '## License Informaton';
+};
+
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
-    return `
-    # ${answers.title}
+    return ` # ${answers.title}
+${renderLicenseBadge(answers.license)}
 
-    # Table of Contents
-    1. [Description](#description)
-    2. [Installation](#installation)
-    3. [Usage](#usage)
-    4. [License](#license)
-    5. [Contributing](#contributing)
-    6. [Tests](#test)
-    7. [Questions](#questions)
+## Table of Contents
 
-    ## Program Description
-    ${answers.description}
+[Description](#description)
+[Installation](#installation)
+[Usage](#usage)
+[License](#license)
+[Contributing](#contributing)
+[Tests](#test)
+[Questions](#questions)
+[Screenshots](#screenshots)
+[Deployed Project URL](#deployedURL)
+[Github Repo URL](#githubRepo)
 
-    ## Installation Instructions:
-    ${answers.installation}
+## Program Description
 
-    ## Usage information:
-    ${answers.usage}
+${answers.description}
 
-    ## License Information:
-    ${answers.license}
+## Installation Instructions
 
-    ## Contributing:
-    ${answers.contributing}
+${answers.installation}
 
-    ## Tests:
-    ${answers.tests}
+## Usage information
 
-    ## Questions:
-    Please contact me with questions:
+${answers.usage}
 
-    ${answers.name}
-    Email: ${answers.email}
-    Github link: ${answers.github}
+## Contributing
+
+${answers.contributing}
+
+## Tests
+
+${answers.tests}
+${renderLicenseSection(answers.license)}
+
+${renderLicenseLink(answers.license)}
+
+## Questions
+
+Please contact me with questions:
+
+- ${answers.name}
+- Email: ${answers.email}
+- Github link: ${answers.github}
 `;
-
 }
 
 module.exports = generateMarkdown;
