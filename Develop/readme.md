@@ -1,40 +1,49 @@
-# title
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-# Table of Contents
-1. [Description](#description)
-2. [Installation](#installation)
-3. [Usage](#usage)
-4. [Licenses](#licenses)
-5. [Contributing](#contributing)
-6. [Tests](#test)
-7. [Questions](#name)
+# Project Title
 
+NodeJS
+
+## Table of Contents
+
+- [Project Title](#project-title)
+  - [Table of Contents](#table-of-contents)
+  - [Program Description](#program-description)
+  - [Installation Instructions](#installation-instructions)
+  - [Usage information](#usage-information)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [License Informaton](#license-informaton)
+  - [Questions](#questions)
 
 ## Program Description
-desc
 
-## Installation Instructions:
-install
+A command-line application that dynamically generates a professional README.md file from a user's input using the [Inquirer package](https://www.npmjs.com/package/inquirer).
 
-## Usage information:
-usage
+## Installation Instructions
 
-## License Information:
-license
+Run the command "npm init" and install the inquirer package with "npm i inquirer"
 
-## Contributing:
-contribut
+## Usage information
 
-## Tests:
-test
+To use the application, run the command "node index.js"
 
+## Contributing
 
-## Questions:
-##name:
-name
+none
 
-##email:
-email
+## Tests
 
-##github:
-github
+Run the application and verify that the requirements have been met.
+
+## License Informaton
+
+https://opensource.org/licenses/Apache-2.0)
+
+## Questions
+
+Please contact me with questions:
+
+- Brandy Quinlan
+- Email: brandyquinlan@gmail.com
+- Github link: brandyquinlan
