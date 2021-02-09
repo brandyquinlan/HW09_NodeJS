@@ -43,10 +43,10 @@ Run the application and verify that the requirements have been met.
 ## Screenshots
 
 #### Readme file dynamically generated with NodeJS (with license)
-![readme with license](img/readme_with_license.png)
+![readme with license](develop/img/readme_with_license.png)
 
 #### Readme file dynamically generated with NodeJS (without license)
-![readme no license](img/readme_no_license.png)
+![readme no license](develop/img/readme_no_license.png)
 
 ## Questions
 
