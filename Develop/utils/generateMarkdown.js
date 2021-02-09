@@ -1,3 +1,4 @@
+// Licensor Information
 const licenseList = [{
         name: 'GNU GPLv3',
         link: "https://www.gnu.org/licenses/gpl-3.0",
@@ -30,7 +31,7 @@ const licenseList = [{
     }
 ];
 
-// TODO: Create a function that returns a license badge based on which license is passed in
+// function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
     const selectedLicense = licenseList.filter(item => item.name === license);
@@ -38,13 +39,11 @@ function renderLicenseBadge(license) {
         return '';
     } else
         return selectedLicense[0].badge;
-    // return selectedLicense[0].badge ? confirmLicense === true;
 };
 
 
-// TODO: Create a function that returns the license link
+// Function that returns the license link
 // If there is no license, return an empty string
-
 function renderLicenseLink(license) {
     const selectedLicense = licenseList.filter(item => item.name === license);
     if (!license) {
@@ -53,9 +52,8 @@ function renderLicenseLink(license) {
         return selectedLicense[0].link;
 }
 
-// TODO: Create a function that returns the license section of README
+// Function that returns the license section of README
 // If there is no license, return an empty string
-
 function renderLicenseSection(license) {
     if (!license) {
         return '';
@@ -63,24 +61,25 @@ function renderLicenseSection(license) {
         return '## License Informaton';
 };
 
-
-// TODO: Create a function to generate markdown for README
+// Function to generate markdown for README
 function generateMarkdown(answers) {
-    return ` # ${answers.title}
-${renderLicenseBadge(answers.license)}
+    return `#${renderLicenseBadge(answers.license)}
+
+# Project Title
+${answers.title}
 
 ## Table of Contents
 
-[Description](#description)
-[Installation](#installation)
-[Usage](#usage)
-[License](#license)
-[Contributing](#contributing)
-[Tests](#test)
-[Questions](#questions)
-[Screenshots](#screenshots)
-[Deployed Project URL](#deployedURL)
-[Github Repo URL](#githubRepo)
+-[Description](#description)
+-[Installation](#installation)
+-[Usage](#usage)
+-[License](#license)
+-[Contributing](#contributing)
+-[Tests](#test)
+-[Questions](#questions)
+-[Screenshots](#screenshots)
+-[Deployed Project URL](#deployedURL)
+-[Github Repo URL](#githubRepo)
 
 ## Program Description
 
@@ -101,6 +100,7 @@ ${answers.contributing}
 ## Tests
 
 ${answers.tests}
+
 ${renderLicenseSection(answers.license)}
 
 ${renderLicenseLink(answers.license)}

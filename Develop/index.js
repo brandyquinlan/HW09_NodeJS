@@ -1,8 +1,9 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const markdown = require('./utils/generateMarkdown.js');
 
+// Prompt for answers
 function init() {
     inquirer
         .prompt([{
@@ -18,7 +19,7 @@ function init() {
             {
                 type: 'input',
                 name: 'github',
-                message: 'What is the URL to your GitHub profile?',
+                message: 'What is your GitHub profile name?',
             },
             {
                 type: 'input',
@@ -77,32 +78,18 @@ function init() {
                 name: 'tests',
                 message: 'Enter any test instructions.',
             },
-            {
-                type: 'input',
-                name: 'deployedURL',
-                message: 'Deployed Project URL',
-            },
-            {
-                type: 'input',
-                name: 'githubRepo',
-                message: 'GitHub Repo URL',
-            },
-
         ])
-        .then((answers) => {
-            // TODO: Create an array of questions for user input
-            // const answers = [];
-            // console.log(answers);
-            const readmeMarkdown = markdown(answers);
 
-            // TODO: Create a function to write README file
-            //function writeToFile(fileName, data) {}
-            fs.writeFile('readme.md', readmeMarkdown, (err) =>
-                err ? console.log(err) : console.log('Successfully created readme.md!')
-            );
-        });
+    .then((answers) => {
+        // Array of questions for user input
+        const readmeMarkdown = markdown(answers);
+
+        //Function to write README file
+        fs.writeFile('readme.md', readmeMarkdown, (err) =>
+            err ? console.log(err) : console.log('Successfully created readme.md!')
+        );
+    });
 }
 
-// TODO: Create a function to initialize app
-
+// Function to initialize app
 init();
