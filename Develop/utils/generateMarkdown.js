@@ -63,23 +63,21 @@ function renderLicenseSection(license) {
 
 // Function to generate markdown for README
 function generateMarkdown(answers) {
-    return `#${renderLicenseBadge(answers.license)}
+    return `${renderLicenseBadge(answers.license)}
 
 # Project Title
+
 ${answers.title}
 
 ## Table of Contents
 
--[Description](#description)
--[Installation](#installation)
--[Usage](#usage)
--[License](#license)
--[Contributing](#contributing)
--[Tests](#test)
--[Questions](#questions)
--[Screenshots](#screenshots)
--[Deployed Project URL](#deployedURL)
--[Github Repo URL](#githubRepo)
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#test)
+- [Questions](#questions)
 
 ## Program Description
 
