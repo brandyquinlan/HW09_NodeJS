@@ -1,4 +1,4 @@
-# HW09_NodeJS
+# NodeJS
 
 ## Table of Contents
 
@@ -43,10 +43,10 @@ Run the application and verify that the requirements have been met.
 ## Screenshots
 
 #### Readme file dynamically generated with NodeJS (with license)
-![readme with license](develop/img/readme_with_license.png)
+* [Link to readme.md output file with a license](https://drive.google.com/file/d/1LLEuNAJbib7tzEYoVxqke4ETxSDgMauL/view?usp=sharing)
 
 #### Readme file dynamically generated with NodeJS (without license)
-![readme no license](develop/img/readme_no_license.png)
+* [Link to readme.md output file with no license](https://drive.google.com/file/d/1aNBal9RtZMJ9Dks6pQVtxZ7jv_mHd-E2/view?usp=sharing)
 
 ## Questions
 
