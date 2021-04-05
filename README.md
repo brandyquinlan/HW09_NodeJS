@@ -30,7 +30,6 @@ none
 
 Run the application and verify that the requirements have been met.
 
-
 ## Video Demos
 
 #### Demo - readme file dynamically generated with NodeJS (with license)
@@ -38,7 +37,6 @@ Run the application and verify that the requirements have been met.
 
 #### Demo - readme file dynamically generated with NodeJS (without license)
 * [Link to demo with no license attached](https://drive.google.com/file/d/1KzgqQY8_sWGzA6Tv6lKAhoo8U_3hYcAQ/view?usp=sharing)
-
 
 ## Screenshots
 
@@ -49,9 +47,10 @@ Run the application and verify that the requirements have been met.
 * [Link to readme.md output file with no license](https://drive.google.com/file/d/1aNBal9RtZMJ9Dks6pQVtxZ7jv_mHd-E2/view?usp=sharing)
 
 ## Questions
-
 Please contact me with questions:
 
-- Brandy Quinlan
-- Email: brandyquinlan@gmail.com
-- Github link: brandyquinlan
+Brandy Quinlan
+<br>
+Email: <brandyquinlan@gmail.com>
+<br>
+Github: [https://github.com/brandyquinlan/](https://github.com/brandyquinlan/)
